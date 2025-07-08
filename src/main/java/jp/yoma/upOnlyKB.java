@@ -1,18 +1,12 @@
 package jp.yoma;
-import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
-//import com.destroystokyo.paper.event.entity.EntityKnockbackByEntityEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.Listener;
 import org.bukkit.util.Vector;
-import org.jetbrains.annotations.NotNull;
-
-import java.nio.file.Path;
 
 public final class upOnlyKB extends JavaPlugin implements Listener {
 
@@ -24,11 +18,6 @@ public final class upOnlyKB extends JavaPlugin implements Listener {
     }
 
     @Override
-    public @NotNull Path getDataPath() {
-        return super.getDataPath();
-    }
-
-    @Override
     public void onDisable() {
         // Plugin shutdown logic
     }
@@ -36,7 +25,8 @@ public final class upOnlyKB extends JavaPlugin implements Listener {
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
             // ダメージを受けたエンティティを取得
         Entity entity = event.getEntity();
-        Entity attacker = event.getDamager();
+        //Entity attacker = event.getDamager();//今後使う可能性を考えて入れたままにしておく
+
         // エンティティがプレイヤーである場合の処理
         if (entity instanceof Player) {
             Player player = (Player) entity;
