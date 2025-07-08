@@ -1,6 +1,10 @@
 name: UpOnlyKB
-version: '1.0.3'
+version: '1.0.4'
 main: jp.yoma.upOnlyKB
-api-version: '1.21'
+api-version: '1.13'
 authors: [ 紅月妖魔 ]
-description: 下向きのノックバックを削除
+description: RemoveUnderKB
+commands:
+  uponlykb:
+    description: Reload config
+    usage: /uponlykb reload

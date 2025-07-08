@@ -6,7 +6,7 @@
 
     <groupId>jp.yoma</groupId>
     <artifactId>uponlykb</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <name>uponlykb</name>
@@ -45,15 +45,17 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <filtering>true</filtering>
+                    <includes>
+                        <include>**/*.yml</include>
+                    </includes>
             </resource>
         </resources>
     </build>
 
     <repositories>
         <repository>
-            <id>spigotmc-repo</id>
-            <url>https://repo.papermc.io/repository/maven-public/</url>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
         <repository>
             <id>sonatype</id>
