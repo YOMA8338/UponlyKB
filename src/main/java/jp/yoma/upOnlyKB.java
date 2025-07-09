@@ -102,6 +102,12 @@ public final class upOnlyKB extends JavaPlugin implements Listener {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (label.equalsIgnoreCase("uponlykb") && args.length == 1 && args[0].equalsIgnoreCase("reload")) {
+            if (!sender.hasPermission("uponlykb.reload")) {
+                sender.sendMessage(ChatColor.RED + "You have no permission!");
+                return true;
+            }
+
+
             loadConfigValues();
             sender.sendMessage(ChatColor.GREEN + "UponlyKB's config reloaded.");
             return true;
