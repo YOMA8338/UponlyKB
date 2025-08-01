@@ -60,45 +60,9 @@ public final class upOnlyKB extends JavaPlugin implements Listener {
                 }
             }
         }
-    }/*なんか上手くいかない
-    public void onEntityKnockbackByEntity(EntityKnockbackByEntityEvent event) {
-        // 攻撃されたエンティティがプレイヤーである場合
-        if (event.getEntity() instanceof org.bukkit.entity.Player) {
-            org.bukkit.entity.Player player = (org.bukkit.entity.Player) event.getEntity();
-            org.bukkit.entity.Entity attacker = (org.bukkit.entity.Entity) event.getHitBy();
-            if(attacker instanceof org.bukkit.entity.Player){
-                if (((Player) attacker).isSprinting()){
-                    Vector newkbsprint = new Vector(event.getKnockback().getX() * 2, 0.36, event.getKnockback().getZ() * 2);
-                    Bukkit.broadcastMessage(String.valueOf(newkbsprint));
-                    Bukkit.broadcastMessage("Sprint");
-                    event.setCancelled(true);
-                    player.setVelocity(newkbsprint);
-
-                }else{
-                    Vector newkb = new Vector(event.getKnockback().getX() * 0.95, 0.352, event.getKnockback().getZ() * 0.95);
-                    Bukkit.broadcastMessage(String.valueOf(newkb));
-                    Bukkit.broadcastMessage("NotSprint or NotPlayer");
-                    event.setCancelled(true);
-                    player.setVelocity(newkb);
-
-                }
-            }else{
-                Vector newkb = new Vector(event.getKnockback().getX() * 0.95, 0.352, event.getKnockback().getZ() * 0.95);
-                attacker.sendMessage(String.valueOf(newkb));
-                attacker.sendMessage("NotSprint or NotPlayer");
-                event.setCancelled(true);
-                player.setVelocity(newkb);
-
-            }
-
-
-        }
-
-
-
-
-
-    }*/
+    }
+    
+    
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (label.equalsIgnoreCase("uponlykb") && args.length == 1 && args[0].equalsIgnoreCase("reload")) {
