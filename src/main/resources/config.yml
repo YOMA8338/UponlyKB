@@ -1,3 +1,21 @@
 knockback:
-  horizontalMultiplier: 0.18
-  verticalBoost: 0.353
+
+  #If you want to use vanilla knockback, set to false
+  active: true
+
+  #Horizontal knockback multiplier (default: 1.0)
+  #Due to technical limitations or other factors,
+  #effects below 1.0 are not expected to be very significant.
+  horizontalkb: 1.0
+  
+  #Vertical knockback (default: 0.35)
+  #When the value is low, it seems to become closer to vanilla knockback.
+  verticalkb: 0.35
+
+
+
+
+
+
+#Do not Touch!!
+config-version: 1
